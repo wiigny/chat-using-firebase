@@ -1,0 +1,37 @@
+@import "@/styles/variables";
+
+.mainPage {
+  display: flex;
+
+  height: 100vh;
+
+  overflow-x: auto;
+
+  > section:first-child {
+    min-width: 336px;
+    max-width: 397px;
+    width: 100%;
+
+    border-right: solid 1px rgb(230, 230, 230);
+
+    position: relative;
+
+    z-index: 2;
+  }
+
+  > section:last-child {
+    background-color: $bg-section-2;
+
+    position: relative;
+
+    min-width: 412px;
+
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+}

@@ -1,0 +1,48 @@
+@import "@/styles/variables";
+
+.headerConversation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: $panel-header-bg;
+
+  padding: 10px 16px;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    > div {
+      font-size: 1.6rem;
+      color: $text-color-grey-0;
+    }
+  }
+}
+
+.headerConversationIcon {
+  color: $panel-header-icon;
+}
+
+.headerConversationNav {
+  display: flex;
+  gap: 2.6rem;
+  align-items: center;
+
+  padding-right: 1rem;
+
+  display: none;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: none;
+
+    border: none;
+
+    color: $panel-header-icon;
+  }
+}

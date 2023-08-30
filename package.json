@@ -9,14 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.1",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
+    "@types/react-howler": "^5.2.0",
+    "axios": "^1.4.0",
+    "clsx": "^2.0.0",
+    "email-validator": "^2.0.4",
+    "emoji-picker-react": "^4.4.10",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
+    "firebase": "^10.1.0",
+    "get-blob-duration": "^1.2.0",
     "next": "13.4.10",
+    "nookies": "^2.5.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "typescript": "5.1.6"
+    "react-hook-form": "^7.45.2",
+    "react-icons": "^4.10.1",
+    "react-wavify": "^1.9.0",
+    "sass": "^1.63.6",
+    "typescript": "5.1.6",
+    "uuid": "^9.0.0",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/firebase": "^3.2.1",
+    "@types/uuid": "^9.0.2"
   }
 }

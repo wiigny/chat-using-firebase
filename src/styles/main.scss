@@ -1,0 +1,9 @@
+@import "./reset";
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(141, 141, 141, 0.37);
+}

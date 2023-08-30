@@ -1,0 +1,200 @@
+@import "@/styles/variables";
+
+.sendConversation {
+  display: flex;
+
+  width: 100%;
+
+  form {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+
+    border-radius: 8px;
+
+    background-color: $input-color;
+
+    padding: 0.9rem 1.2rem;
+    margin: 0.5rem 0.8rem;
+
+    > textarea {
+      flex: 1;
+
+      resize: none;
+
+      height: 22px;
+      max-height: 105px;
+
+      border: none;
+
+      width: 100%;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: flex-end;
+
+    padding-bottom: 1.2rem;
+
+    > svg {
+      color: $panel-header-icon;
+    }
+  }
+
+  > div {
+    display: flex;
+
+    gap: 2rem;
+
+    > button:last-child {
+      animation: entrySendButton 0.5s forwards;
+    }
+  }
+}
+
+.sendImageInConversation {
+  display: flex;
+
+  position: relative;
+
+  z-index: 7;
+
+  > ul {
+    position: absolute;
+    bottom: 55px;
+
+    list-style: none;
+
+    background-color: $white-fixed;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 12px 8px;
+
+    li {
+      border-radius: 8px;
+
+      color: $text-color-grey-0;
+
+      width: 170px;
+      max-height: min-content;
+
+      display: flex;
+
+      * {
+        padding: 0.8rem 1.2rem;
+      }
+
+      div {
+        padding: 0 0 0 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          padding: 0;
+        }
+      }
+
+      label {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        background-color: $panel-header-bg;
+      }
+    }
+  }
+}
+
+.micRecorder {
+  padding: 0.65rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5rem !important;
+
+  p {
+    color: $text-color-grey-1-active;
+
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 0;
+  }
+}
+
+.micRecorderButtonSend {
+  background-color: $brand-2;
+
+  border-radius: 100%;
+
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
+
+  padding: 1rem !important;
+
+  svg {
+    color: $white-fixed !important;
+  }
+}
+
+.micAnimate {
+  flex: 1;
+
+  animation: micRecorderEntry 0.5s forwards;
+}
+
+@keyframes micRecorderEntry {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes entrySendButton {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animateReverseButton {
+  animation: rotateReverseAnimateButton 0.3s forwards;
+}
+
+.animateButton {
+  animation: rotateAnimateButton 0.3s forwards;
+}
+
+@keyframes rotateAnimateButton {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes rotateReverseAnimateButton {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

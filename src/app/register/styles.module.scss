@@ -1,0 +1,166 @@
+@import "@/styles/variables";
+
+.registerPage {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    max-width: 350px;
+    width: 80%;
+
+    border: 1px solid #f3f3f3;
+    border-radius: 0.8rem;
+
+    box-shadow: 2px 5px 10px #d8d8d8;
+
+    padding: 2.4rem 1.8rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    h1 {
+      color: #646464;
+    }
+
+    p {
+      color: $error-1;
+
+      font-size: 1.2rem;
+    }
+
+    fieldset {
+      border: none;
+
+      display: flex;
+      gap: 0.2rem;
+      flex-direction: column-reverse;
+
+      overflow: hidden;
+
+      padding: 1rem 0 0;
+
+      p {
+        font-size: 1.2rem;
+
+        color: crimson;
+      }
+
+      label {
+        position: relative;
+
+        span {
+          font-size: 1.4rem;
+
+          color: $text-color-grey-1;
+
+          position: absolute;
+          bottom: -24px;
+          left: 2px;
+
+          transition: 0.2s ease-in;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -30px;
+
+          width: 100%;
+
+          border-bottom: 2px solid $brand-2;
+
+          transform: translateX(-400px);
+
+          transition: all 0.4s ease;
+        }
+      }
+
+      input {
+        color: $text-color-grey-1;
+
+        border: none;
+        border-bottom: 2px solid #d8d8d8;
+
+        width: 100%;
+
+        padding: 0.4rem 1.2rem;
+
+        font-size: 1.4rem;
+      }
+
+      input:valid + label span {
+        bottom: -5px;
+        left: 0;
+      }
+
+      input:focus + label span {
+        bottom: -5px;
+        left: 0;
+      }
+
+      input:valid + label::before {
+        transform: translateX(0);
+      }
+      input:focus + label::before {
+        transform: translateX(0);
+      }
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+
+      margin-top: 0.8rem;
+
+      button {
+        color: $white-fixed;
+
+        background-color: $brand-2;
+
+        padding: 0.8rem 1.4rem;
+
+        border-radius: 8px;
+
+        transition: background-color 0.4s ease;
+
+        &:hover {
+          background-color: $brand-1;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+
+          cursor: default;
+        }
+      }
+
+      div {
+        text-align: center;
+
+        span,
+        a {
+          font-size: 1.2rem;
+        }
+
+        a {
+          color: $link;
+          margin-left: 0.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .registerPage {
+    label::before {
+      bottom: -29.5px !important;
+    }
+  }
+}

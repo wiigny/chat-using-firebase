@@ -1,0 +1,36 @@
+@import "@/styles/variables";
+
+.imageHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 49px;
+  height: 49px;
+
+  border-radius: 100%;
+  overflow: hidden;
+
+  border-radius: 1000px;
+  background-color: #dfe5e7;
+
+  img {
+    object-fit: cover;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  p {
+    color: $brand-1;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    padding-bottom: 0.3rem;
+  }
+}
+
+.figureWithoutBgColor {
+  background-color: transparent !important;
+}

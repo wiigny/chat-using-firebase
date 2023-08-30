@@ -1,0 +1,75 @@
+@import "@/styles/variables";
+
+.divContainerSearch {
+  section {
+    flex: 1;
+    background-color: $white-fixed;
+
+    height: 100%;
+
+    > fieldset {
+      border: none;
+
+      padding: 0 0.8rem 0 1.1rem;
+      margin: 0.8rem 1.2rem 0;
+
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      background-color: $seach-input-bg;
+      border-radius: 8px;
+
+      height: 35px;
+
+      svg {
+        color: $brand-2;
+      }
+
+      > input {
+        border: none;
+
+        background-color: transparent;
+        color: $text-color-grey-1-active;
+
+        font-size: 1.5rem;
+
+        flex: 1;
+      }
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      padding: 1rem 0.8rem 0 1.1rem;
+    }
+  }
+}
+
+.asideExitingAnimation {
+  animation: exiting 0.6s forwards !important;
+}
+
+@keyframes entered {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes exiting {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+}

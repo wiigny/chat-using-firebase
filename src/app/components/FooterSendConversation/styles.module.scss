@@ -1,0 +1,36 @@
+@import "@/styles/variables";
+
+.footerSendConversation {
+  background-color: $panel-footer-bg;
+
+  padding: 0.5rem 1.6rem;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+
+    aside {
+      background-color: transparent;
+
+      padding: 0;
+
+      border: none !important;
+    }
+  }
+}
+
+.footerSendConversationDivAlert {
+  font-size: 1.4rem;
+
+  color: $text-color-grey-1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.75rem 0;
+
+  span {
+    color: $link;
+  }
+}
